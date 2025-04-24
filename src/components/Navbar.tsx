@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,7 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuTrigger,
+  NavigationMenuLink,
   navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu";
 import { User, ShoppingCart, Heart, Menu } from "lucide-react";
@@ -29,14 +31,12 @@ const Navbar = () => {
                       {["Tops", "Dresses", "Pants", "Skirts", "Jackets", "Shoes", "Accessories"].map(
                         (category) => (
                           <li key={category}>
-                            <NavigationMenuLink asChild>
-                              <Link 
-                                to={`/category/women-${category.toLowerCase()}`}
-                                className="block select-none space-y-1 rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
-                              >
-                                {category}
-                              </Link>
-                            </NavigationMenuLink>
+                            <Link 
+                              to={`/category/women-${category.toLowerCase()}`}
+                              className="block select-none space-y-1 rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
+                            >
+                              {category}
+                            </Link>
                           </li>
                         )
                       )}
@@ -50,14 +50,12 @@ const Navbar = () => {
                       {["Shirts", "Pants", "Hoodies", "Jackets", "Shorts", "Shoes", "Accessories"].map(
                         (category) => (
                           <li key={category}>
-                            <NavigationMenuLink asChild>
-                              <Link 
-                                to={`/category/men-${category.toLowerCase()}`}
-                                className="block select-none space-y-1 rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
-                              >
-                                {category}
-                              </Link>
-                            </NavigationMenuLink>
+                            <Link 
+                              to={`/category/men-${category.toLowerCase()}`}
+                              className="block select-none space-y-1 rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
+                            >
+                              {category}
+                            </Link>
                           </li>
                         )
                       )}
@@ -71,14 +69,12 @@ const Navbar = () => {
                       {["Baby", "Toddler", "Boys", "Girls", "Teens", "Shoes", "Accessories"].map(
                         (category) => (
                           <li key={category}>
-                            <NavigationMenuLink asChild>
-                              <Link 
-                                to={`/category/kids-${category.toLowerCase()}`}
-                                className="block select-none space-y-1 rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
-                              >
-                                {category}
-                              </Link>
-                            </NavigationMenuLink>
+                            <Link 
+                              to={`/category/kids-${category.toLowerCase()}`}
+                              className="block select-none space-y-1 rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
+                            >
+                              {category}
+                            </Link>
                           </li>
                         )
                       )}
