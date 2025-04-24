@@ -1,12 +1,79 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Search } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import CategorySection from "@/components/CategorySection";
+import FeaturedItems from "@/components/FeaturedItems";
+import HowItWorks from "@/components/HowItWorks";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-[#FDE1D3] to-[#FFE8DD] py-16 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="md:w-1/2 space-y-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800">
+                Give your clothes a second life
+              </h1>
+              <p className="text-lg text-gray-700">
+                Buy and sell pre-loved clothing in your community. Sustainable fashion made simple.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="bg-[#F97316] hover:bg-[#EA580C]">
+                  <Link to="/sell">Start Selling</Link>
+                </Button>
+                <Button size="lg" variant="outline" className="border-[#F97316] text-[#F97316] hover:bg-[#FDE1D3] hover:text-[#EA580C]">
+                  <Link to="/browse">Shop Now</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="md:w-1/2">
+              <img 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
+                alt="Person browsing clothes" 
+                className="rounded-lg shadow-lg w-full h-auto max-h-96 object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Search Bar */}
+      <section className="bg-white py-8 px-4 shadow-sm">
+        <div className="container mx-auto max-w-2xl">
+          <div className="relative">
+            <Input 
+              type="text" 
+              placeholder="Search for items..." 
+              className="pl-10 pr-4 py-6 rounded-full border-gray-300"
+            />
+            <Search className="absolute left-3 top-3 text-gray-400" />
+            <Button className="absolute right-1 top-1 rounded-full bg-[#F97316] hover:bg-[#EA580C]">
+              Search
+            </Button>
+          </div>
+        </div>
+      </section>
+      
+      {/* Categories */}
+      <CategorySection />
+      
+      {/* Featured Items */}
+      <FeaturedItems />
+      
+      {/* How It Works */}
+      <HowItWorks />
+      
+      <Footer />
     </div>
   );
 };
