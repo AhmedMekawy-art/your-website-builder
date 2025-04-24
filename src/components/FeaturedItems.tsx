@@ -1,32 +1,31 @@
-
 import React from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 
-// Mock data for featured items
+// Update the mock data items
 const featuredItems = [
   {
     id: 1,
-    title: "Vintage Denim Jacket",
-    price: 45.99,
+    title: "Vintage Abaya",
+    price: 165,
     seller: "fashionista22",
     rating: 4.8,
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+    image: "https://images.unsplash.com/photo-1631947430066-48c30d57b943",
     size: "M",
-    brand: "Levi's",
+    brand: "Local Designer",
     condition: "Good",
   },
   {
     id: 2,
-    title: "Summer Floral Dress",
-    price: 29.99,
+    title: "Traditional Dress",
+    price: 249,
     seller: "sustainable_style",
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+    image: "https://images.unsplash.com/photo-1618838811353-e5c8a83611cc",
     size: "S",
-    brand: "H&M",
+    brand: "Premium Collection",
     condition: "Like New",
   },
   {
@@ -76,12 +75,16 @@ const featuredItems = [
 ];
 
 const FeaturedItems = () => {
+  const formatPrice = (price: number) => {
+    return `AED ${price.toFixed(2)}`;
+  };
+
   return (
     <section className="py-12 px-4 bg-gray-50">
       <div className="container mx-auto max-w-6xl">
         <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl font-bold">Featured Items</h2>
-          <Link to="/browse" className="text-[#F97316] hover:underline">
+          <h2 className="text-3xl font-amatic font-bold">Featured Items</h2>
+          <Link to="/browse" className="text-[#E26D5A] hover:underline font-sans">
             View all
           </Link>
         </div>
@@ -114,10 +117,10 @@ const FeaturedItems = () => {
                 <CardContent className="pt-4 flex-grow">
                   <div className="flex justify-between items-start">
                     <div>
-                      <h3 className="font-semibold text-lg line-clamp-1">{item.title}</h3>
-                      <p className="text-gray-500 text-sm">{item.brand}, Size {item.size}</p>
+                      <h3 className="font-amatic font-bold text-xl line-clamp-1">{item.title}</h3>
+                      <p className="text-gray-500 text-sm font-sans">{item.brand}, Size {item.size}</p>
                     </div>
-                    <p className="font-bold text-lg">${item.price.toFixed(2)}</p>
+                    <p className="font-bold text-lg font-sans">{formatPrice(item.price)}</p>
                   </div>
                 </CardContent>
                 <CardFooter className="pt-1 pb-4 border-t">

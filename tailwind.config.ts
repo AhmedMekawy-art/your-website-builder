@@ -19,8 +19,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
-        heading: ['Outfit', 'sans-serif'],
+        sans: ['Avenir Light', 'system-ui', 'sans-serif'],
+        amatic: ['Amatic SC', 'cursive'],
       },
       colors: {
         border: 'hsl(var(--border))',
