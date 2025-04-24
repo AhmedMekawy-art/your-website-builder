@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CategorySection from "@/components/CategorySection";
@@ -21,26 +20,34 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="md:w-1/2 space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800">
-                Give your clothes a second life
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#222222]">
+                Pre-loved Fashion, Zero Hassle
               </h1>
-              <p className="text-lg text-gray-700">
-                Buy and sell pre-loved clothing in your community. Sustainable fashion made simple.
+              <p className="text-lg text-[#222222]">
+                Join the UAE's preloved fashion community—list, ship and get paid in a few taps.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-[#F97316] hover:bg-[#EA580C]">
+                <Button 
+                  size="lg" 
+                  className="bg-[#F97316] hover:bg-[#EA580C] focus-visible:ring-2 focus-visible:ring-[#F97316] focus-visible:ring-offset-2"
+                >
                   <Link to="/sell">Start Selling</Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-[#F97316] text-[#F97316] hover:bg-[#FDE1D3] hover:text-[#EA580C]">
-                  <Link to="/browse">Shop Now</Link>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-2 border-[#F97316] text-[#000000] hover:bg-[#FDE1D3] focus-visible:ring-2 focus-visible:ring-[#F97316] focus-visible:ring-offset-2"
+                >
+                  <Link to="/browse">Browse Items</Link>
                 </Button>
               </div>
             </div>
             <div className="md:w-1/2">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
-                alt="Person browsing clothes" 
+                src="https://images.unsplash.com/photo-1603052875158-3b121f7144de" 
+                alt="Friends swapping clothes"
                 className="rounded-lg shadow-lg w-full h-auto max-h-96 object-cover"
+                loading="lazy"
               />
             </div>
           </div>
