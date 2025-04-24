@@ -7,25 +7,25 @@ const categories = [
   {
     id: 1,
     name: "Women",
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+    image: "https://images.unsplash.com/photo-1525845859779-54d477ff291f?auto=format&fit=crop&q=80",
     url: "/browse/women",
   },
   {
     id: 2,
     name: "Men",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    image: "https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?auto=format&fit=crop&q=80",
     url: "/browse/men",
   },
   {
     id: 3,
     name: "Kids",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
+    image: "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?auto=format&fit=crop&q=80",
     url: "/browse/kids",
   },
   {
     id: 4,
     name: "Accessories",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+    image: "https://images.unsplash.com/photo-1509319117193-57bab727e09d?auto=format&fit=crop&q=80",
     url: "/browse/accessories",
   },
 ];
